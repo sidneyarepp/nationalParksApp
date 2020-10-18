@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Park Finder</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="smokey-the-bear.png">
+</head>
+<body>
+    <div id=content-wrapper>
+        <header>
+        </header>
+
+        <section>
+            <h1>National Park Finder</h1>
+            <form id="user-repos">
+                <div>
+                <label for="state-name"><p>What states will you be traveling in? Please enter state abbreviations.</p>(If more than one state is entered please separate them with a comma, ex. MI,OH):</label>
+                <input type="text" name="state-name" id="state-name" required>
+                </div>
+                <br>
+                <div>
+                <label for="max-results">Max Results to Return:</label>
+                <input type="number" name="max-results" id="max-results" min=1 value="10">
+                </div>
+                <button type="submit" id="form-submit">Submit</button>
+            </form>
+        </section>
+
+        <main class="hidden">
+            <ul id="parks-results">
+                <!-- National park information will show here. -->
+            </ul>
+        </main>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
